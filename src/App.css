@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #7a734e;
+  --primary-dark: #5a5339;
+  --secondary-color: #000000;
+  --accent-color: #c6c8fc;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --border-color: #333333;
+  --background-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: #333333;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.btn-primary {
+  @apply bg-[#7a734e] text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-secondary {
+  @apply bg-white text-black px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  border: 1px solid #7a734e;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  color: #333333;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #333333;
+}
+
+.input-field:focus {
+  border-color: var(--accent-color);
+  ring-color: var(--accent-color);
+}
+
+.status-badge {
+  @apply px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.pipeline-stage {
+  @apply bg-white rounded-lg p-4 min-h-96;
+  border: 1px solid #cccccc;
+}
+
+.pipeline-card {
+  @apply bg-white rounded-lg p-4 shadow-sm border border-gray-200 cursor-pointer hover:shadow-md transition-shadow duration-200;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
